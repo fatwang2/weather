@@ -52,7 +52,7 @@ class weather(Plugin):
 
                 reply = Reply()  # 创建回复消息对象
                 reply.type = ReplyType.TEXT  # 设置回复消息的类型为文本
-                reply.content = f"🌦 天气信息 ({address})\n"
+                reply.content = f"🏙️ 城市 ({address})\n"
                 reply.content += f"🌡 温度: {temp}\n"
                 reply.content += f"🌫 天气: {weather}\n"
                 reply.content += f"🌬 风向: {windDirection}\n"
