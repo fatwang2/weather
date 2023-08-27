@@ -26,11 +26,11 @@ class weather(Plugin):
         if content.startswith("天气 "):
             parts = content.split(" ")
             if len(parts) > 1:
-            city = parts[1]  # 获取城市名称
-            app_id = conf().get("weather_app_id")  # 从配置文件中获取 app_id
-            app_secret = conf().get("weather_app_secret")  # 从配置文件中获取 app_secret
-            # 构建完整的请求URL
-            url = f"https://www.mxnzp.com/api/weather/current/{city}?app_id={app_id}&app_secret={app_secret}"
+                city = parts[1]  # 获取城市名称
+                app_id = conf().get("weather_app_id")  # 从配置文件中获取 app_id
+                app_secret = conf().get("weather_app_secret")  # 从配置文件中获取 app_secret
+                # 构建完整的请求URL
+                url = f"https://www.mxnzp.com/api/weather/current/{city}?app_id={app_id}&app_secret={app_secret}"
 
             try:
                 response = requests.get(url)  # 发送 get 请求
